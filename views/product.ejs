@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <% for(let i = 0; i < paginatedProduct.length; i++) { %>
+        <h3><%= paginatedProduct[i].name%></h3>
+        <h3><%= paginatedProduct[i].price%></h3>
+        <p><%= paginatedProduct[i].description%></p>
+    <% } %>
+    <a href="/products?limit=<%= limit%>&page=<%=page - 1%>" style="margin-right: 50px;">Prev</a>
+    <a href="/products?limit=<%= limit%>&page=<%=page + 1%>">Next</a>
+
+    
+        
+</body>
+</html>
